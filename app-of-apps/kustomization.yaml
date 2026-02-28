@@ -7,7 +7,6 @@ commonLabels:
   backstage.io/kubernetes-namespace: rodan-demo 
   app.kubernetes.io/part-of: voltron-quarkus-8f
 resources:
-  - ci-tekton.yaml
   - application-dev.yaml
   - application-stage.yaml
   - application-prod.yaml
