@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: voltron-quarkus-8f-gitops
+  description: This is GitOps manifest for voltron-quarkus-8f   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=voltron-quarkus-8f
+    backstage.io/kubernetes-id: voltron-quarkus-8f 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: voltron-quarkus-8f
+spec:
+  type: gitops
+  owner: user:default/deanpeterson 
+  lifecycle: experimental
+  dependsOn:
+    - component:voltron-quarkus-8f
